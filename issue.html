@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter issue · Los Gatos Math Circle</title>
+  <meta name="description" content="An issue of the Los Gatos Math Circle newsletter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- MathJax for TeX in issues -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [["$", "$"]], displayMath: [["$$", "$$"]] },
+      svg: { fontCache: "global" },
+      options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="images/logo.png" alt="Los Gatos Math Circle logo" width="26" height="26" />
+        <span>Los Gatos Math Circle</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meetings.html">Meetings</a></li>
+          <li><a href="presentations.html">Slides</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="newsletter.html" class="is-active">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main data-issue>
+    <header class="issue-header">
+      <div class="container">
+        <a class="back-link" href="newsletter.html">&larr; All issues</a>
+        <div class="kicker" data-issue-kicker></div>
+        <h1 data-issue-title>Loading&hellip;</h1>
+        <div class="byline" data-issue-byline></div>
+      </div>
+    </header>
+
+    <div class="issue-cover" data-issue-cover></div>
+
+    <article class="article" data-issue-body><!-- rendered by js/main.js --></article>
+
+    <nav class="issue-nav" data-issue-nav aria-label="More issues"></nav>
+
+    <!-- Subscribe prompt -->
+    <section class="section">
+      <div class="container">
+        <div class="signup">
+          <div class="signup__grid">
+            <div>
+              <span class="eyebrow">Enjoyed this?</span>
+              <h2 style="margin-bottom:0.4rem;">Get the next issue in your inbox.</h2>
+              <p>One short email a month: a recap, a problem, and what's coming up.</p>
+            </div>
+            <div>
+              <form data-confirm novalidate>
+                <label for="email" class="eyebrow" style="margin-bottom:0.5rem;">Email address</label>
+                <input id="email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+                <button class="btn btn--solid" type="submit">Subscribe</button>
+              </form>
+              <p class="signup__ok">Thanks! You're on the list. See you next issue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="images/logo.png" alt="Los Gatos Math Circle logo" width="26" height="26" />
+            <span>Los Gatos Math Circle</span>
+          </a>
+          <p>A weekly gathering of curious students exploring beautiful mathematics in Los Gatos,
+            California.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetings.html">Meetings</a></li>
+            <li><a href="presentations.html">Slides</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@losgatosmathcircle.org">hello@losgatosmathcircle.org</a></li>
+            <li><a href="meetings.html">Los Gatos Library</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Los Gatos Math Circle</span>
+        <span>Grades 6–12 · All levels welcome</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/issues.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
