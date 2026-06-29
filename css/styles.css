@@ -676,3 +676,11 @@ mjx-container { max-width: 100%; }
   .sched-row--break .sr-break { grid-column: 1; }
   .stage { aspect-ratio: 4 / 5; }
 }
+
+@media print {
+  .site-header, .site-footer, .back-link, .nav__toggle, .actions, .btn { display: none !important; }
+  body, main { background: #fff; }
+  .page-intro { padding-top: 0; }
+  .problem, .note { break-inside: avoid; page-break-inside: avoid; }
+  .section--hairline { border: 0; }
+}
