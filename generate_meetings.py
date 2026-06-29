@@ -879,10 +879,10 @@ SEASONS = [
 
 # Cancelled Saturdays (no meeting). date -> reason.
 CANCELLED = {
- "2023-10-21": "Cancelled, venue unavailable",
- "2024-04-13": "Cancelled, AMC weekend",
- "2025-02-08": "Cancelled, snow day",
- "2025-11-08": "Cancelled, instructor travel",
+ "2023-10-21": "Cancelled",
+ "2024-04-13": "Cancelled",
+ "2025-02-08": "Cancelled",
+ "2025-11-08": "Cancelled",
 }
 MONTHS=["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 WD=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
