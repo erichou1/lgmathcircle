@@ -598,6 +598,8 @@ mjx-container { max-width: 100%; }
 .sched-row--break { grid-template-columns: 3rem 9.5rem 1fr; background: var(--bg); }
 .sched-row--break .sr-break { font-size: 0.86rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); font-style: italic; font-family: var(--serif); text-transform: none; }
 .sched-row--break .sr-date { color: var(--line-strong); }
+.sched-row--cancelled .sr-date { text-decoration: line-through; }
+.sched-row--cancelled .sr-break { color: var(--accent); font-style: normal; }
 
 /* ==========================================================================
    Slide deck viewer

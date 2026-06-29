@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+
+\newcommand{\problem}[2]{%
+  \par\medskip\noindent\textbf{Problem #1.}\quad\textit{(#2)}\par\smallskip}
+
+\title{\vspace{-1.5cm}\textbf{2026 Team Tryout Problem Set}\\[0.3em]
+\large Los Gatos Math Circle}
+\author{}
+\date{Due: Friday, August 28, 2026}
+
+\begin{document}
+\maketitle
+
+\noindent
+Eight olympiad problems across the main contest topics. Work through as many as
+you can. You are \textbf{not} expected to solve all eight---a few complete,
+well-written solutions tell us far more than eight rushed ones. Write full
+solutions explaining your reasoning, work on your own, and submit a single PDF.
+
+\bigskip
+
+\problem{1}{Algebra}
+Find all polynomials $P(x)$ with real coefficients such that
+\[
+  P(x)\,P(x+1) = P\!\left(x^2 + x + 1\right) \qquad \text{for all real } x.
+\]
+
+\problem{2}{Number theory}
+Prove that for every integer $n$, the number $n^5 - n$ is divisible by $30$.
+
+\problem{3}{Combinatorics}
+Each cell of a $3 \times 7$ grid is colored black or white. Prove that there
+exist two rows and two columns such that the four cells lying at their
+intersections all have the same color.
+
+\problem{4}{Inequalities}
+Let $a, b, c$ be positive real numbers. Prove that
+\[
+  \frac{a}{b+c} + \frac{b}{c+a} + \frac{c}{a+b} \;\ge\; \frac{3}{2}.
+\]
+
+\problem{5}{Geometry --- Challenge}
+Let $ABC$ be a triangle with incenter $I$. Line $AI$ meets the circumcircle of
+$ABC$ again at $M$. Prove that
+\[
+  MB = MC = MI.
+\]
+
+\problem{6}{Functional equations}
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that, for all real $x$
+and $y$,
+\[
+  f(x+y) = f(x) + f(y) \qquad \text{and} \qquad f(xy) = f(x)\,f(y).
+\]
+
+\problem{7}{Invariants}
+The numbers $1, 2, 3, \dots, 2026$ are written on a board. In one move you erase
+two numbers $a$ and $b$ and write their absolute difference $|a - b|$. After
+$2025$ moves a single number remains. Prove that this number is odd.
+
+\problem{8}{Number theory --- Challenge}
+Find all integer solutions $(x, y, z)$ of the equation
+\[
+  x^2 + y^2 + z^2 = 2xyz.
+\]
+
+\end{document}

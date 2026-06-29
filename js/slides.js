@@ -36,6 +36,11 @@
             '<span class="sr-n"></span>' +
             '<span class="sr-date">' + esc(shortDate(m.label)) + "</span>" +
             '<span class="sr-break">' + esc(m.brk) + ", no meeting</span></div>";
+        } else if (m.type === "cancelled") {
+          html += '<div class="sched-row sched-row--break sched-row--cancelled">' +
+            '<span class="sr-n"></span>' +
+            '<span class="sr-date">' + esc(shortDate(m.label)) + "</span>" +
+            '<span class="sr-break">' + esc(m.brk) + "</span></div>";
         } else {
           html += '<div class="sched-row">' +
             '<span class="sr-n">' + m.n + "</span>" +

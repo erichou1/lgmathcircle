@@ -876,6 +876,14 @@ SEASONS = [
  ("2024\u201325", date(2024,9,7),  date(2025,5,24)),
  ("2025\u201326", date(2025,9,6),  date(2026,6,6)),
 ]
+
+# Cancelled Saturdays (no meeting). date -> reason.
+CANCELLED = {
+ "2023-10-21": "Cancelled, venue unavailable",
+ "2024-04-13": "Cancelled, AMC weekend",
+ "2025-02-08": "Cancelled, snow day",
+ "2025-11-08": "Cancelled, instructor travel",
+}
 MONTHS=["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 WD=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
@@ -916,6 +924,8 @@ for label, start, end in SEASONS:
         bl=break_label(d, end)
         if bl:
             meetings.append({"date":iso,"label":dl,"type":"break","brk":bl})
+        elif iso in CANCELLED:
+            meetings.append({"date":iso,"label":dl,"type":"cancelled","brk":CANCELLED[iso]})
         else:
             n+=1
             if iso in ANCHOR:
@@ -931,6 +941,8 @@ for label, start, end in SEASONS:
 placed={m["date"] for s in schedule for m in s["meetings"]}
 for a in ANCHOR:
     assert a in placed, f"anchor {a} not in schedule"
+for c in CANCELLED:
+    assert c in placed, f"cancelled {c} not on a scheduled Saturday"
 for s in schedule:
     for m in s["meetings"]:
         if m["type"]=="meeting":
@@ -944,7 +956,8 @@ open("js/meetings.js","w").write(out)
 
 tot_meet=sum(1 for s in schedule for m in s["meetings"] if m["type"]=="meeting")
 tot_break=sum(1 for s in schedule for m in s["meetings"] if m["type"]=="break")
-print(f"modules: {len(M)}   meetings: {tot_meet}   breaks: {tot_break}")
+tot_cancel=sum(1 for s in schedule for m in s["meetings"] if m["type"]=="cancelled")
+print(f"modules: {len(M)}   meetings: {tot_meet}   breaks: {tot_break}   cancelled: {tot_cancel}")
 # Slide-count stats (each shown deck = these + 1 title slide added by the viewer).
 lens=sorted(len(M[m]["s"])+1 for m in M)
 imgslides=sum(1 for m in M for sl in M[m]["s"] if len(sl)>=3)
