@@ -876,3 +876,10 @@ h1, h2, h3 { color: var(--black); }
   .masthead__sub { display: none; }
   .masthead__logo { width: 62px; height: 54px; }
 }
+
+/* Real photos with credit lines */
+.box__fig { margin: 0 0 1rem; }
+.box__fig .box__photo { margin-bottom: 0.35rem; aspect-ratio: 16 / 8; object-position: center 60%; }
+.credit { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; }
+.credit a { color: var(--muted); }
+.measure-block > div { max-width: 44rem; }
