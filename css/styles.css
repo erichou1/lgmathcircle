@@ -823,3 +823,56 @@ h2 { font-size: clamp(1.35rem, 2.6vw, 1.65rem); }
   text-transform: none; letter-spacing: 0; font-size: 0.88rem; font-weight: 600;
 }
 .facts .k { color: var(--ink); }
+
+/* ==========================================================================
+   2026-10 palette: Los Gatos orange and black on white (town / LGHS colors).
+   Replaces the navy and gold.
+   ========================================================================== */
+:root {
+  --orange: #e0701b;
+  --orange-ink: #a84b0c;   /* text-safe orange on white */
+  --black: #1a1a1a;
+  --navy: var(--orange-ink);
+  --navy-dark: #7f390a;
+  --gold: var(--orange);
+  --accent: var(--orange-ink);
+  --ink: #1a1a1a;
+  --line: #dcdcdc;
+  --line-strong: #c4c4c4;
+}
+body { background: #f3f1ee; }
+a { color: var(--orange-ink); }
+a:hover { color: var(--navy-dark); }
+
+.masthead { background: #fff; border-bottom: 1px solid var(--line); }
+.masthead__inner { padding-block: 1rem; }
+.masthead__brand { color: var(--black); gap: 1.2rem; }
+.masthead__brand:hover { color: var(--black); }
+.masthead__logo { width: 96px; height: 84px; background: none; border-radius: 0; padding: 0; }
+.masthead__text { font-family: "Libre Baskerville", Georgia, serif; line-height: 1.1; }
+.masthead__name { font-size: clamp(1.6rem, 3.6vw, 2.25rem); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; }
+.masthead__name2 { font-size: clamp(0.95rem, 2vw, 1.25rem); font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--orange); margin-top: 0.3rem; }
+.masthead__sub { margin-left: auto; text-align: right; font-size: 0.9rem; color: #555; opacity: 1; line-height: 1.45; }
+
+.navbar { background: var(--black); border-top: 0; border-bottom: 4px solid var(--orange); }
+.navbar .nav__links a.is-active { color: var(--orange); }
+
+.bar { background: none; color: var(--black); font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; font-size: 1.2rem; padding: 0 0 0.35rem; border-bottom: 3px solid var(--orange); }
+.sub { color: var(--black); }
+.info th { background: #f6f4f1; }
+.log tr:nth-child(odd) td { background: #faf8f6; }
+.box details { background: #faf8f6; }
+.box summary { color: var(--orange-ink); }
+.side { border-top: 3px solid var(--black); }
+.btn--solid { background: var(--black); border-color: var(--black); }
+.btn--solid:hover { background: #000; }
+.person__role { background: var(--black); }
+.site-footer { background: var(--black); border-top: 4px solid var(--orange); }
+.site-footer .brand__mark { display: none; }
+h1, h2, h3 { color: var(--black); }
+.page-intro h1, .section h2 { font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; }
+
+@media (max-width: 860px) {
+  .masthead__sub { display: none; }
+  .masthead__logo { width: 62px; height: 54px; }
+}
