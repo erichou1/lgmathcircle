@@ -17,7 +17,7 @@
   --maxw: 1100px;
   --measure: 40rem;     /* comfortable reading width */
 
-  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -685,4 +685,64 @@ mjx-container { max-width: 100%; }
   .page-intro { padding-top: 0; }
   .problem, .note { break-inside: avoid; page-break-inside: avoid; }
   .section--hairline { border: 0; }
+}
+
+/* ==========================================================================
+   Home page (2026-10 revamp): one column of plain rows, labels on the left.
+   ========================================================================== */
+.home .h-intro { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem); }
+.h-intro__grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.home h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 1.1rem; }
+.h-lede { font-family: var(--serif); font-size: clamp(1.2rem, 2.1vw, 1.42rem); line-height: 1.5; color: var(--ink); max-width: 34rem; margin-bottom: 1.8rem; }
+.h-facts { margin: 0; display: grid; gap: 0; max-width: 34rem; }
+.h-facts > div { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem; padding: 0.55rem 0; border-top: 1px solid var(--line); }
+.h-facts > div:last-child { border-bottom: 1px solid var(--line); }
+.h-facts dt { font-size: 0.85rem; color: var(--muted); padding-top: 0.1rem; }
+.h-facts dd { margin: 0; font-size: 0.98rem; }
+.h-more { margin: 1.1rem 0 0; font-size: 0.97rem; }
+.h-sep { color: var(--line-strong); margin: 0 0.35rem; }
+
+.h-problem { background: var(--bg); border: 1px solid var(--line-strong); padding: 1.5rem 1.6rem 1.3rem; font-family: var(--serif); font-size: 1.08rem; line-height: 1.55; }
+.h-problem__src { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); margin: 0 0 0.35rem; }
+.h-problem__title { font-size: 1.45rem; margin: 0 0 0.8rem; }
+.h-problem p { margin: 0 0 0.8rem; }
+.h-problem details { border-top: 1px solid var(--line); padding: 0.55rem 0; font-size: 1rem; }
+.h-problem details:last-of-type { padding-bottom: 0; }
+.h-problem summary { cursor: pointer; font-family: var(--sans); font-size: 0.9rem; color: var(--ink-soft); list-style: none; }
+.h-problem summary::-webkit-details-marker { display: none; }
+.h-problem summary::before { content: "+"; display: inline-block; width: 1.1em; color: var(--muted); }
+.h-problem details[open] summary::before { content: "\2212"; }
+.h-problem details p { margin: 0.5rem 0 0.3rem; color: var(--ink-soft); }
+
+.h-photo { margin: 0 0 clamp(1.5rem, 4vw, 2.5rem); }
+.h-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 70%; }
+.h-photo figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
+
+.h-row { border-top: 1px solid var(--line); padding-block: clamp(2rem, 5vw, 3rem); }
+.h-row__grid { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 2rem; }
+.h-row__label { font-size: 1.25rem; font-weight: 500; margin: 0.1rem 0 0; }
+.h-row__body { max-width: 44rem; }
+.h-row__body > p:not(.h-more):not(.h-note) { font-family: var(--serif); font-size: 1.15rem; line-height: 1.6; }
+.h-row__body > p:last-child { margin-bottom: 0; }
+.h-note { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.6rem; }
+
+.h-log { list-style: none; margin: 0; padding: 0; }
+.h-log li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+.h-log li:first-child { border-top: 1px solid var(--line); }
+.h-log__date { font-size: 0.86rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.h-log__title { font-family: var(--serif); font-size: 1.1rem; text-decoration: none; }
+.h-log__title:hover { text-decoration: underline; }
+.h-log__tag { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+
+@media (max-width: 880px) {
+  .h-intro__grid { grid-template-columns: 1fr; }
+  .h-row__grid { grid-template-columns: 1fr; gap: 0.9rem; }
+  .h-photo img { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 520px) {
+  .h-log li { grid-template-columns: 1fr auto; gap: 0.1rem 0.8rem; }
+  .h-log__date { grid-column: 1; }
+  .h-log__tag { grid-column: 2; grid-row: 1; }
+  .h-log__title { grid-column: 1 / -1; }
+  .h-problem { padding: 1.2rem 1.15rem 1rem; }
 }

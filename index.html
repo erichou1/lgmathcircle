@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Los Gatos Math Circle</title>
-  <meta name="description" content="A weekly gathering of curious students in Los Gatos exploring beautiful mathematics together. Free, all levels, grades 6–12." />
+  <meta name="description" content="Students in grades 6 to 12 meet at the Los Gatos Library on Saturday mornings to work on hard math problems together. Free and student-run." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/favicon.png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="home">
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
@@ -35,133 +35,99 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div>
-          <span class="eyebrow">Los Gatos, California</span>
-          <h1>A place to love math.</h1>
-          <p class="lede">We're a group of students who meet every week to work on problems we
-            actually find fun. We try things, get stuck, argue about it, and figure it out
-            together.</p>
-          <div class="actions hero__actions">
-            <a class="btn btn--solid" href="meetings.html">Visit a meeting</a>
-            <a class="arrow-link" href="newsletter.html">Read the newsletter &rarr;</a>
-          </div>
+    <section class="h-intro">
+      <div class="container h-intro__grid">
+        <div class="h-intro__text">
+          <h1>Los Gatos Math Circle</h1>
+          <p class="h-lede">Students in grades 6 to 12 meet at the Los Gatos Library on Saturday
+            mornings to work on hard problems together. It's free and student-run. You can
+            drop in any week.</p>
+          <dl class="h-facts">
+            <div><dt>When</dt><dd>Saturdays, 10:00 to noon, September through May</dd></div>
+            <div><dt>Where</dt><dd>Teen Section, Los Gatos Library, 100 Villa Ave</dd></div>
+            <div><dt>Who</dt><dd>Grades 6 to 12, any level</dd></div>
+            <div><dt>Cost</dt><dd>Free</dd></div>
+          </dl>
+          <p class="h-more"><a href="meetings.html">Directions and what to bring</a></p>
         </div>
-        <div class="hero__media">
-          <img src="images/hero.jpg" alt="The Los Gatos Math Circle 2026 team and students." />
-        </div>
+
+        <aside class="h-problem" aria-labelledby="p-title">
+          <p class="h-problem__src">From our first meeting of 2025&ndash;26</p>
+          <h2 id="p-title" class="h-problem__title">The locker problem</h2>
+          <p>A hallway has 1000 closed lockers. Student 1 opens every locker. Student 2
+            toggles every second locker, student 3 toggles every third, and so on up to
+            student 1000.</p>
+          <p><em>When everyone is done, how many lockers are open?</em></p>
+          <details>
+            <summary>Hint</summary>
+            <p>Locker <i>n</i> is toggled once for every divisor of <i>n</i>.</p>
+          </details>
+          <details>
+            <summary>Answer</summary>
+            <p>31. Divisors of <i>n</i> pair up as <i>d</i> and <i>n</i>/<i>d</i>, so almost every
+              locker is toggled an even number of times. The exception is a perfect square,
+              where &radic;<i>n</i> pairs with itself. There are 31 squares up to 1000, since
+              31&sup2; = 961 and 32&sup2; = 1024.</p>
+          </details>
+        </aside>
       </div>
     </section>
 
-    <!-- Newsletter signup, placed high on the page -->
-    <section class="section" id="signup" style="padding-top:0;">
+    <figure class="h-photo">
       <div class="container">
-        <div class="signup">
-          <div class="signup__grid">
-            <div>
-              <span class="eyebrow">The newsletter</span>
-              <h2>A short note, once a month.</h2>
-              <p>Meeting recaps, a problem worth your time, and what's coming up, sent to your
-                inbox. No spam, unsubscribe anytime.</p>
-            </div>
-            <div>
-              <form data-confirm novalidate>
-                <label for="email" class="eyebrow" style="margin-bottom:0.5rem;">Email address</label>
-                <input id="email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
-                <button class="btn btn--solid" type="submit">Subscribe</button>
-              </form>
-              <p class="note">We'll only use your email for the newsletter.</p>
-              <p class="signup__ok">Thanks! You're on the list. See you next issue.</p>
-            </div>
-          </div>
+        <img src="images/hero.jpg" alt="Students and mentors of the Los Gatos Math Circle in 2026, gathered in front of a whiteboard." />
+        <figcaption>The circle in spring 2026.</figcaption>
+      </div>
+    </figure>
+
+    <section class="h-row">
+      <div class="container h-row__grid">
+        <h2 class="h-row__label">A Saturday</h2>
+        <div class="h-row__body">
+          <p>We start with a short warm-up puzzle, then split into three groups by
+            experience. Explorers (grades 6 to 8) work on puzzles and patterns with no contest
+            background needed. Challengers (8 to 10) work AMC-style problems and first proofs.
+            Olympians (10 to 12) prepare for the AIME and ARML.</p>
+          <p>Most of the morning goes to one themed problem set. In the last half hour people
+            present solutions at the board, and everyone leaves with one harder problem for the
+            week.</p>
+          <p class="h-more"><a href="meetings.html">Full schedule for a session</a></p>
         </div>
       </div>
     </section>
 
-    <!-- What it is -->
-    <section class="section section--hairline">
-      <div class="container split split--media-first">
-        <div class="frame split__media">
-          <img src="images/writing-math.jpg" alt="A hand writing mathematical formulas on a blackboard." />
-        </div>
-        <div>
-          <span class="eyebrow">What is a math circle?</span>
-          <h2>Mathematics the way it is actually done.</h2>
-          <p>No lectures to memorize. We hand you a problem that looks simple, then follow your
-            curiosity wherever it leads. Newer problem-solvers and seasoned competitors each work
-            at the right level, in small groups around a table.</p>
-          <p class="mb-0"><a class="arrow-link" href="meetings.html">See how a Saturday runs &rarr;</a></p>
+    <section class="h-row">
+      <div class="container h-row__grid">
+        <h2 class="h-row__label">Recent meetings</h2>
+        <div class="h-row__body">
+          <p class="h-note" data-meeting-count>Slides from every meeting since September 2023 are online.</p>
+          <ol class="h-log" data-recent-meetings="8"></ol>
+          <p class="h-more"><a href="presentations.html">All meetings and slides</a></p>
         </div>
       </div>
     </section>
 
-    <!-- Three plain columns -->
-    <section class="section section--hairline">
-      <div class="container">
-        <div class="cols">
-          <div class="col">
-            <div class="col__n">i.</div>
-            <h3>Weekly problem solving</h3>
-            <p>Themed sessions in combinatorics, geometry, number theory, and more, worked by
-              hand, discussed out loud.</p>
-          </div>
-          <div class="col">
-            <div class="col__n">ii.</div>
-            <h3>A competition team</h3>
-            <p>For those who want it, we train together for the AMC, AIME, ARML, and HiMCM.
-              <a href="team.html">Meet the team &rarr;</a></p>
-          </div>
-          <div class="col">
-            <div class="col__n">iii.</div>
-            <h3>A real community</h3>
-            <p>Curiosity is the only prerequisite. Come to be happily stuck for a while. Getting
-              unstuck together is the point.</p>
-          </div>
+    <section class="h-row">
+      <div class="container h-row__grid">
+        <h2 class="h-row__label">Competition team</h2>
+        <div class="h-row__body">
+          <p>Some members also train together for the AMC, AIME, ARML, and HiMCM. Our 2025
+            HiMCM team was named a Finalist on Problem B, the contest's top award category, and
+            two members have qualified for the USAMO.</p>
+          <p class="h-more"><a href="team.html">The team and this year's tryout set</a>
+            <span class="h-sep">/</span> <a href="achievements.html">Results by year</a></p>
         </div>
       </div>
     </section>
 
-    <!-- Meetings teaser -->
-    <section class="section section--hairline">
-      <div class="container split split--media-wide">
-        <div>
-          <span class="eyebrow">Meetings</span>
-          <h2>Saturday mornings at the Los Gatos Library.</h2>
-          <p>We gather weekly during the school year in the library's Teen Section. Your first
-            visit is free and casual. Drop in, meet the group, and try a problem or two.</p>
-          <ul class="facts mt-3">
-            <li><span class="k">Where</span><span class="v"><strong>Los Gatos Library</strong>, Teen Section · 100 Villa Avenue</span></li>
-            <li><span class="k">When</span><span class="v">Saturdays, 10:00 AM – 12:00 PM (Sept–May)</span></li>
-            <li><span class="k">Who</span><span class="v">Students in grades 6–12, all levels</span></li>
-            <li><span class="k">Cost</span><span class="v">Free, volunteer run</span></li>
-          </ul>
-          <div class="actions mt-3">
-            <a class="btn btn--outline" href="meetings.html">Schedule &amp; map</a>
-          </div>
+    <section class="h-row">
+      <div class="container h-row__grid">
+        <h2 class="h-row__label">Newsletter</h2>
+        <div class="h-row__body">
+          <p class="h-note">Meeting write-ups and the occasional essay, written by members.</p>
+          <ol class="h-log h-log--issues" data-recent-list="4"></ol>
+          <p class="h-more"><a href="newsletter.html">All issues</a></p>
         </div>
-        <div class="map split__media">
-          <iframe
-            title="Map showing the location of the Los Gatos Library"
-            loading="lazy"
-            src="https://www.google.com/maps?q=Los+Gatos+Library,+100+Villa+Avenue,+Los+Gatos,+CA+95030&output=embed">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recent issues -->
-    <section class="section section--hairline">
-      <div class="container">
-        <div class="actions" style="justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;">
-          <div>
-            <span class="eyebrow">From the newsletter</span>
-            <h2 class="mb-0">Recent issues</h2>
-          </div>
-          <a class="arrow-link" href="newsletter.html">All issues &rarr;</a>
-        </div>
-        <div class="issue-grid" data-recent-issues="3"><!-- rendered by js/main.js --></div>
       </div>
     </section>
   </main>
@@ -174,8 +140,7 @@
             <img class="brand__mark" src="images/logo.png" alt="Los Gatos Math Circle logo" width="26" height="26" />
             <span>Los Gatos Math Circle</span>
           </a>
-          <p>A weekly gathering of curious students exploring beautiful mathematics in Los Gatos,
-            California.</p>
+          <p>Los Gatos Library, 100 Villa Avenue, Los Gatos, CA 95030. Saturdays during the school year.</p>
         </div>
         <div>
           <h4>Pages</h4>
@@ -198,12 +163,47 @@
       </div>
       <div class="footer-bottom">
         <span>© <span data-year>2026</span> Los Gatos Math Circle</span>
-        <span>Grades 6–12 · All levels welcome</span>
+        <span>Site by <a href="https://www.ehou.me">Eric Hou</a></span>
       </div>
     </div>
   </footer>
 
   <script src="js/issues.js"></script>
+  <script src="js/meetings.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  (function () {
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+    function short(iso) {
+      var d = new Date(iso + "T00:00:00");
+      return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    }
+
+    var log = document.querySelector("[data-recent-meetings]");
+    if (log && window.SCHEDULE) {
+      var all = [];
+      window.SCHEDULE.forEach(function (t) { t.meetings.forEach(function (m) { if (m.type === "meeting") all.push(m); }); });
+      all.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      var n = +log.getAttribute("data-recent-meetings");
+      log.innerHTML = all.slice(0, n).map(function (m) {
+        return '<li><span class="h-log__date">' + short(m.date) + '</span>' +
+          '<a class="h-log__title" href="slides.html?d=' + encodeURIComponent(m.date) + '">' + esc(m.title) + '</a>' +
+          '<span class="h-log__tag">' + esc(m.topic) + '</span></li>';
+      }).join("");
+      var c = document.querySelector("[data-meeting-count]");
+      if (c) c.textContent = "Slides from all " + all.length + " meetings since September 2023 are online.";
+    }
+
+    var list = document.querySelector("[data-recent-list]");
+    if (list && window.ISSUES) {
+      var issues = window.ISSUES.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      list.innerHTML = issues.slice(0, +list.getAttribute("data-recent-list")).map(function (it) {
+        return '<li><span class="h-log__date">' + short(it.date) + '</span>' +
+          '<a class="h-log__title" href="issue.html?slug=' + encodeURIComponent(it.slug) + '">' + esc(it.title) + '</a>' +
+          '<span class="h-log__tag">No. ' + it.number + '</span></li>';
+      }).join("");
+    }
+  })();
+  </script>
 </body>
 </html>
