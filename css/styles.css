@@ -883,3 +883,8 @@ h1, h2, h3 { color: var(--black); }
 .credit { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; }
 .credit a { color: var(--muted); }
 .measure-block > div { max-width: 44rem; }
+.box__fig .box__photo--session { aspect-ratio: 16 / 10; object-position: center top; }
+
+/* Cat logo (2026-10): tall mark */
+.masthead__logo { width: 59px; height: 92px; }
+@media (max-width: 860px) { .masthead__logo { width: 38px; height: 60px; } }
