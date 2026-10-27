@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<title>Los Gatos Math Circle</title>
+<rect width="64" height="64" rx="12" fill="#e0701b"/>
+<path d="M11 6 L25 16.5 Q32 14.8 39 16.5 L53 6 L52.5 23 Q57 31 56 40 Q54.5 52 32 56 Q9.5 52 8 40 Q7 31 11.5 23 Z" fill="#1a1a1a"/>
+<path d="M19 33 Q23.5 28.5 28 33 Q23.5 36.5 19 33 Z" fill="#e0701b"/>
+<path d="M36 33 Q40.5 28.5 45 33 Q40.5 36.5 36 33 Z" fill="#e0701b"/>
+<path d="M29 42 L35 42 L32 45.5 Z" fill="#e0701b"/>
+</svg>
