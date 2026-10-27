@@ -888,3 +888,7 @@ h1, h2, h3 { color: var(--black); }
 /* Cat logo (2026-10): tall mark */
 .masthead__logo { width: 59px; height: 92px; }
 @media (max-width: 860px) { .masthead__logo { width: 38px; height: 60px; } }
+
+/* Unified mark (2026-10): logo and favicon are the same cat-head tile */
+.masthead__logo { width: 76px; height: 76px; }
+@media (max-width: 860px) { .masthead__logo { width: 52px; height: 52px; } }
