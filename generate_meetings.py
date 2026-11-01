@@ -13,10 +13,10 @@ def mod(mid, t, topic, slides): M[mid] = {"t": t, "topic": topic, "s": slides}
 
 # --- Welcomes / community ---
 mod("welcome_gauss", "Welcome, and a famous sum", "Welcome", [
- ["Welcome to the circle", "<p>Glad you're here. We do math the way mathematicians actually do it: play with examples, make guesses, argue about them, and prove the ones that survive.</p><p>No grades. Just good problems and a whiteboard.</p>"],
+ ["Welcome to the circle", "<p>hi! first meeting. we'll do a problem together, then you work on some in groups.</p><p>if you're new, sit with someone and ask questions</p>"],
  ["A quick story", "<p>Young Carl Friedrich Gauss was told to add every number from 1 to 100. He finished in seconds. How?</p>"],
  ["The trick", "<p>Pair the ends: $1+100$, $2+99$, $3+98$, ... Each pair sums to 101, and there are 50 pairs.</p>$$1+2+\\cdots+100 = \\frac{100\\cdot 101}{2} = 5050.$$"],
- ["The general rule", "<p>The same pairing gives a formula for any $n$:</p>$$1+2+\\cdots+n = \\frac{n(n+1)}{2}.$$<p>One good idea replaced a hundred additions.</p>"],
+ ["The general rule", "<p>The same pairing gives a formula for any $n$:</p>$$1+2+\\cdots+n = \\frac{n(n+1)}{2}.$$"],
  ["Your turn", "<p>What is $1+2+\\cdots+200$? And what is $2+4+6+\\cdots+100$?</p>"],
 ])
 mod("welcome_squares", "How many squares on a board?", "Welcome", [
@@ -71,7 +71,7 @@ mod("binomial", "The binomial theorem", "Algebra", [
  ["Try it", "<p>Find the coefficient of $x^2$ in $(1+x)^{10}$.</p>"],
 ])
 mod("pascal", "Pascal's triangle", "Combinatorics", [
- ["A triangle of numbers", "<p>Each entry is the sum of the two above it. It looks like a doodle; it's a map of counting.</p>"],
+ ["A triangle of numbers", "<p>Each entry is the sum of the two above it. Every entry counts something.</p>"],
  ["The rule", "$$\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}.$$<p>To choose $k$ from $n$, either include the last item or don't.</p>"],
  ["Hidden patterns", "<p>Rows sum to $2^n$. The shallow diagonals add up to Fibonacci numbers.</p>"],
  ["Try it", "<p>Prove the hockey stick: $\\sum_{i=r}^{n}\\binom{i}{r}=\\binom{n+1}{r+1}$.</p>"],
@@ -91,7 +91,7 @@ mod("casting_nines", "Casting out nines", "Number theory", [
  ["A warning", "<p>Matching doesn't prove correctness, but a mismatch always reveals a real error.</p>"],
 ])
 mod("modular", "Clock math: modular arithmetic", "Number theory", [
- ["Wrap-around", "<p>It's 10 o'clock; wait 5 hours and it's 3, not 15. Arithmetic that wraps around is one of our sharpest tools.</p>"],
+ ["Wrap-around", "<p>It's 10 o'clock; wait 5 hours and it's 3, not 15. That's mod 12.</p>"],
  ["Notation", "<p>$a\\equiv b\\pmod m$ means $m$ divides $a-b$. You can add and multiply congruences like equations.</p>"],
  ["Last digit of $7^{100}$", "<p>Track powers mod 10: $7,9,3,1$ then repeat. Period 4, and $100=4\\cdot 25$, so $7^{100}\\equiv 1$. Last digit is 1.</p>"],
  ["Try it", "<p>Show $n^5-n$ is a multiple of 10 for every integer $n$.</p>"],
@@ -121,7 +121,7 @@ mod("number_bases", "Counting in other bases", "Number theory", [
  ["Try it", "<p>What is $100$ in base 7? And what base makes $44$ equal to $24$ in base ten?</p>"],
 ])
 mod("diophantine", "Equations in whole numbers", "Number theory", [
- ["Integer solutions only", "<p>A Diophantine equation asks for whole-number solutions, which changes everything.</p>"],
+ ["Integer solutions only", "<p>A Diophantine equation is one where we only want integer solutions.</p>"],
  ["A linear one", "<p>$3x+5y=1$ has solutions because $\\gcd(3,5)=1$. One is $x=2,y=-1$; all others differ by multiples of $(5,-3)$.</p>"],
  ["A factoring trick", "<p>For $\\frac1x+\\frac1y=\\frac1{12}$, clear denominators to get $(x-12)(y-12)=144$. Each factor pair gives a solution.</p>"],
  ["Try it", "<p>Find all positive integer solutions of $\\frac1x+\\frac1y=\\frac12$.</p>"],
@@ -167,7 +167,7 @@ mod("picks", "Pick's theorem", "Geometry", [
 mod("triangle_centers", "The many centers of a triangle", "Geometry", [
  ["More than one middle", "<p>A triangle has several natural centers, each where three special lines meet.</p>"],
  ["Four classics", "<p>Centroid (medians), incenter (angle bisectors), circumcenter (perpendicular bisectors), orthocenter (altitudes).</p>"],
- ["Euler line", "<p>Amazingly, the centroid, circumcenter, and orthocenter are always collinear, and the centroid splits the segment $2:1$.</p>"],
+ ["Euler line", "<p>The centroid, circumcenter, and orthocenter are always collinear, and the centroid splits the segment $2:1$.</p>"],
  ["Try it", "<p>Where is the circumcenter of a right triangle? (Hint: the midpoint of the hypotenuse.)</p>"],
 ])
 mod("geometry_transforms", "Symmetry and transformations", "Geometry", [
@@ -179,7 +179,7 @@ mod("geometry_transforms", "Symmetry and transformations", "Geometry", [
 
 # --- Pigeonhole / invariants / proof ---
 mod("pigeonhole_socks", "Socks, birthdays, pigeons", "Combinatorics", [
- ["An obvious idea", "<p>More pigeons than holes means some hole holds two. Simple, and powerful.</p>"],
+ ["An obvious idea", "<p>More pigeons than holes means some hole holds two. </p>"],
  ["The drawer", "<p>Black and white socks in the dark: grab 3 and two must match. Two colors, three socks.</p>"],
  ["Stretch it", "<p>Among 13 people, two share a birth month. Among any group, two people have the same number of friends inside it.</p>"],
  ["Try it", "<p>Pick any five integers. Show two have a difference divisible by 4.</p>"],
@@ -187,7 +187,7 @@ mod("pigeonhole_socks", "Socks, birthdays, pigeons", "Combinatorics", [
 mod("pigeonhole", "Pigeonhole: too many pigeons", "Combinatorics", [
  ["The principle", "<p>Put more items than categories and a category repeats. The craft is choosing the categories.</p>"],
  ["Five points", "<p>Drop five points in a unit square. Cut it into four half-squares; two points share one, so they're within</p>$$\\tfrac{\\sqrt2}{2}.$$"],
- ["The real skill", "<p>Nobody hands you the boxes. Inventing them is the whole move.</p>"],
+ ["The real skill", "<p>The hard part is picking what the boxes are.</p>"],
  ["Try it", "<p>From 51 numbers chosen out of 1..100, show two are coprime and two differ by 1.</p>"],
 ])
 mod("invariants", "What never changes", "Invariants", [
@@ -377,7 +377,7 @@ mod("year_wrap3", "Year-end problem marathon", "Community", [
 import hashlib
 EXTRA = {
  "welcome_gauss": [
-  ["What we do here", "<p>We pick problems that look simple and chase them until they surprise us. You will be wrong sometimes. That is the job.</p>"],
+  ["What we do here", "<p>We pick problems that look simple and chase them until they surprise us. Most guesses will be wrong, that's fine.</p>"],
   ["Warm-up", "<p>Add the first ten even numbers: $2+4+\\cdots+20$. Spot a shortcut before brute force.</p>"],
   ["A second pattern", "<p>The triangular numbers $1,3,6,10,15$ are partial sums $1+2+\\cdots+n$. Each is $\\frac{n(n+1)}{2}$.</p>"],
   ["Why pairing works", "<p>Reverse the sum and add it to itself. Every column totals $n+1$, and there are $n$ columns, so twice the sum is $n(n+1)$.</p>"],
@@ -802,52 +802,53 @@ IMG = {
  "Community":    [("images/library.jpg","The Los Gatos Library"),("images/newsletter-feature.jpg","The Los Gatos Math Circle"),("images/hero.jpg","Our circle"),("images/students.jpg","Around the table"),("images/usa/u03.jpg","A mathematics program")],
 }
 
+PROBLEM_HEADS = {"Try it", "Going further", "Your turn", "Take-home", "Bonus", "Warm-up", "Warmup"}
+
 def build_deck(mid):
+    """Turn a module's beats into a deck that looks like a student made it.
+
+    Real circle slides are uneven: different people use different themes, some
+    capitalize headings and some don't, problems get numbered, and the decks
+    are different lengths. No stock photos, no agenda/recap bookends.
+    """
     base = M[mid]
     beats = list(base["s"]) + EXTRA.get(mid, [])
-    topic = base["topic"]
-    heads = [b[0] for b in beats if b and b[0]]
     h = int(hashlib.md5(mid.encode()).hexdigest(), 16)
-    imgs = IMG.get(topic, IMG["Community"])
-    # rotate so different modules of one topic open with different photos
-    rot = h % len(imgs)
-    imgs = imgs[rot:] + imgs[:rot]
-
-    target = 15 + (h % 6)          # 15..20 total slides (incl. JS title slide)
-    content_target = target - 1     # slides we emit here
-
-    deck = []
-    deck.append(["Today's plan", "<ul>" + "".join("<li>" + x + "</li>" for x in heads[:6]) + "</ul>"])
-
-    # how many photos to use
-    fixed = 1 + 2  # agenda + recap + closing
-    img_n = max(2, min(len(imgs), content_target - len(beats) - fixed))
-    used = 0
-    # interleave: drop a photo after roughly every third beat
-    for k, b in enumerate(beats):
-        deck.append(b)
-        if used < img_n and (k + 1) % 3 == 0:
-            p, c = imgs[used]; used += 1
-            deck.append(["", "", p, c])
-    # any remaining photos go before the recap
-    while used < img_n:
-        p, c = imgs[used]; used += 1
-        deck.append(["", "", p, c])
-
-    deck.append(["What we saw today", "<ul>" + "".join("<li>" + x + "</li>" for x in heads[:7]) + "</ul>"])
-    deck.append(["Until next Saturday", "<p>Take the last problem home and sit with it. Bring a pencil, bring a question, and we will see you next week.</p>"])
-
-    # trim extra photos (never the beats, agenda, recap, or closing) if too long
-    while len(deck) > content_target:
-        for i in range(len(deck) - 3, 0, -1):
-            if len(deck[i]) >= 3:  # a photo slide
-                deck.pop(i); break
-        else:
-            break
+    lower = (h >> 3) % 3 == 0          # about a third of presenters type headings in lowercase
+    drop_pitfall = (h >> 5) % 2 == 0
+    deck, k = [], 0
+    for i, b in enumerate(beats):
+        head, body = b[0], b[1]
+        if head == "A pitfall" and drop_pitfall:
+            continue
+        if head in PROBLEM_HEADS or head.startswith("Warm-up"):
+            k += 1
+            if head.startswith("Warm") and k == 1:
+                head = "Warmup"
+            elif head == "Going further" and i == len(beats) - 1 and (h >> 7) % 2:
+                head = "Homework"
+            else:
+                head = f"Problem {k}"
+                if "hard" in body.lower() or (h >> (9 + k)) % 7 == 0:
+                    head += " (harder)"
+        if lower and not head.startswith(("Problem", "Warmup", "Homework")):
+            head = head[0].lower() + head[1:]
+        deck.append([head, body])
+    # Cap long decks unevenly so they aren't all the same size.
+    cap = 7 + (h % 7)
+    if len(deck) > cap:
+        deck = deck[:cap - 1] + [deck[-1]]
+    end = (h >> 11) % 4
+    if end == 0:
+        deck.append(["", "<p style='font-size:1.6em'>Questions?</p>"])
+    elif end == 1:
+        deck.append(["", "<p style='font-size:1.6em'>thanks for coming!!</p>"])
     return deck
 
 for _mid in list(M.keys()):
     M[_mid]["s"] = build_deck(_mid)
+    # Presenter's slide style: Google Slides default or LaTeX Beamer.
+    M[_mid]["theme"] = "beamer" if int(hashlib.md5((_mid + "t").encode()).hexdigest(), 16) % 5 < 2 else "gslides"
 
 # ---------------------------------------------------------------------------
 # Anchor dates from the newsletter timeline -> module id.

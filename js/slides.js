@@ -87,43 +87,35 @@
     document.title = mod.t + " · Slides · Los Gatos Math Circle";
     if (metaEl) metaEl.textContent = hit.year + " · Meeting " + m.n + " · " + shortDate(m.label);
 
-    // Build slides: a title slide, then the module's slides.
+    // Build slides. Each deck uses its presenter's style (Google Slides or Beamer).
+    var theme = mod.theme || "gslides";
+    stage.className = "stage stage--" + theme;
     var slides = [];
-    slides.push(
-      '<section class="slide slide--title">' +
-      '<div class="slide__kicker">Los Gatos Math Circle</div>' +
-      "<h1>" + esc(mod.t) + "</h1>" +
-      '<div><span class="st-topic">' + esc(mod.topic) + "</span></div>" +
-      '<div class="st-date">' + esc(m.label) + " · Meeting " + m.n + "</div>" +
-      "</section>"
-    );
+    var dateShort = shortDate(m.label);
+    if (theme === "beamer") {
+      slides.push(
+        '<section class="slide slide--title">' +
+        "<h1>" + esc(mod.t) + "</h1>" +
+        '<div class="st-by">Los Gatos Math Circle</div>' +
+        '<div class="st-date">' + esc(dateShort) + "</div>" +
+        "</section>"
+      );
+    } else {
+      slides.push(
+        '<section class="slide slide--title">' +
+        "<h1>" + esc(mod.t) + "</h1>" +
+        '<div class="st-by">LG Math Circle &middot; ' + esc(dateShort) + "</div>" +
+        "</section>"
+      );
+    }
+    var total = mod.s.length + 1;
     mod.s.forEach(function (slide, i) {
-      var head = slide[0], body = slide[1], img = slide[2], cap = slide[3];
-      var cls = "slide";
-      var inner = '<div class="slide__kicker">' + (i + 1) + " / " + mod.s.length + "</div>";
-      if (img && body) {
-        // Text + image side by side.
-        cls += " slide--split";
-        inner +=
-          '<div class="slide__cols">' +
-          '<div class="slide__text">' +
-          (head ? "<h2>" + esc(head) + "</h2>" : "") +
-          '<div class="slide__body">' + body + "</div></div>" +
-          '<figure class="slide__media"><img src="' + esc(img) + '" alt="' + esc(cap || head || "") + '" />' +
-          (cap ? '<figcaption>' + esc(cap) + "</figcaption>" : "") +
-          "</figure></div>";
-      } else if (img) {
-        // Full image slide with a caption heading.
-        cls += " slide--photo";
-        inner +=
-          (head ? "<h2>" + esc(head) + "</h2>" : "") +
-          '<figure class="slide__media slide__media--wide"><img src="' + esc(img) + '" alt="' + esc(cap || head || "") + '" />' +
-          (cap ? '<figcaption>' + esc(cap) + "</figcaption>" : "") +
-          "</figure>";
-      } else {
-        inner += "<h2>" + esc(head) + "</h2>" + '<div class="slide__body">' + body + "</div>";
-      }
-      slides.push('<section class="' + cls + '">' + inner + "</section>");
+      var head = slide[0], body = slide[1];
+      var inner = "";
+      if (head) inner += (theme === "beamer" ? '<div class="frametitle">' + esc(head) + "</div>" : "<h2>" + esc(head) + "</h2>");
+      inner += '<div class="slide__body">' + body + "</div>";
+      if (theme === "beamer") inner += '<div class="pageno">' + (i + 2) + " / " + total + "</div>";
+      slides.push('<section class="slide' + (head ? "" : " slide--plain") + '">' + inner + "</section>");
     });
 
     stage.innerHTML = slides.join("");
