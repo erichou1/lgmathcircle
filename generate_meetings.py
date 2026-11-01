@@ -814,7 +814,7 @@ def build_deck(mid):
     base = M[mid]
     beats = list(base["s"]) + EXTRA.get(mid, [])
     h = int(hashlib.md5(mid.encode()).hexdigest(), 16)
-    lower = (h >> 3) % 3 == 0          # about a third of presenters type headings in lowercase
+    lower = (h >> 3) % 9 == 0          # an occasional presenter types headings in lowercase
     drop_pitfall = (h >> 5) % 2 == 0
     deck, k = [], 0
     for i, b in enumerate(beats):
